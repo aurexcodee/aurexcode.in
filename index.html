@@ -1,48 +1,243 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AurexCode Solutions</title>
-  <meta name="description" content="AurexCode Solutions - Best Brains, Better Solutions.">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1020;
-      color: white;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-    }
-    main { max-width: 750px; }
-    .logo { font-size: 18px; color: #a5b4fc; letter-spacing: 4px; }
-    h1 { font-size: clamp(38px, 7vw, 68px); margin: 22px 0; }
-    h1 span { color: #818cf8; }
-    .tagline { font-size: clamp(20px, 4vw, 30px); }
-    p { color: #cbd5e1; line-height: 1.8; }
-    a {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 25px;
-      border-radius: 8px;
-      background: #6366f1;
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AurexCode Solutions | Home</title>
+<meta name="description" content="AurexCode Solutions - Best Brains… Better Solutions…">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #030d25;
+}
+
+header {
+  width: 100%;
+  min-height: 88px;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(2, 12, 35, 0.96);
+  border-bottom: 1px solid rgba(70, 140, 255, 0.2);
+}
+
+.logo {
+  font-size: clamp(21px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #079fff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 42px);
+}
+
+nav a {
+  color: #eaf2ff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: .25s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #08a9ff;
+  border-bottom-color: #08a9ff;
+}
+
+.hero {
+  min-height: calc(100vh - 88px);
+  padding: 70px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 85%, #06377a 0%, transparent 42%),
+    radial-gradient(ellipse at 90% 25%, #16145b 0%, transparent 42%),
+    linear-gradient(135deg, #04132f, #02091e 75%);
+}
+
+.content {
+  width: 100%;
+  max-width: 950px;
+  animation: appear 1s ease both;
+}
+
+.welcome {
+  color: #c4e3ff;
+  letter-spacing: 8px;
+  font-size: 19px;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(39px, 7.5vw, 82px);
+  line-height: 1.12;
+  margin-bottom: 25px;
+}
+
+h1 span {
+  color: #079fff;
+}
+
+.tagline {
+  font-size: clamp(19px, 3vw, 30px);
+  color: #b8d8ff;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.status {
+  margin-top: 48px;
+}
+
+.gear {
+  color: #079fff;
+  font-size: 48px;
+  display: inline-block;
+  animation: rotate 8s linear infinite;
+}
+
+.status p {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.status small {
+  display: block;
+  margin-top: 12px;
+  color: #9cb6db;
+  font-size: 14px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #02091b;
+  color: #8fa9cf;
+  font-size: 13px;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 12px;
+  }
+
+  nav {
+    gap: 10px 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .welcome {
+    letter-spacing: 5px;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 55px 16px;
+  }
+
+  .status {
+    margin-top: 38px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <main>
-    <div class="logo">AUREXCODE</div>
-    <h1>Welcome to <span>AurexCode</span></h1>
-    <div class="tagline">Best Brains… Better Solutions…</div>
-    <p>We turn ideas into smart digital solutions.</p>
-    <a href="mailto:info@aurexcode.in">Contact Us</a>
-  </main>
+
+<header>
+  <div class="logo">AUREX<span>CODE</span></div>
+
+  <nav aria-label="Main navigation">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#service">Service</a>
+    <a href="#gallery">Gallary</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="content">
+      <div class="welcome">WELCOME TO</div>
+
+      <h1>AurexCode Solutions</span></h1>
+
+      <div class="tagline">
+        Best Brains… Better Solutions…
+      </div>
+
+      <div class="status">
+        <div class="gear" aria-hidden="true">⚙</div>
+        <p>Updating...</p>
+        <small>Our website is currently being updated.<br>
+        Please visit us again soon!</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> AurexCode Solutions. All rights reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.querySelectorAll("nav a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    document.querySelectorAll("nav a").forEach(function(item) {
+      item.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
+});
+</script>
+
 </body>
 </html>
+```
